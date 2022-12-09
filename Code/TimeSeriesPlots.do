@@ -4,7 +4,7 @@
 /* Create Aggregate index*/ 
 clear
 clear matrix
-cd "E:\Dropbox\Patents\codeReplication2\Data"
+cd "/Users/slepot/Documents/taff/Technological-Innovation-Resource-Allocation-and-Growth-Replication-Kit/Data"
 
 set mem 1g
 use  mkcap, clear

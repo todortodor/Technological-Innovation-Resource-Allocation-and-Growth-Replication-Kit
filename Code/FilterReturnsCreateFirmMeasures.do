@@ -1,6 +1,6 @@
 clear all
 
-cd "E:\Dropbox\Patents\codeReplication2\Data"
+cd "/Users/slepot/Documents/taff/Technological-Innovation-Resource-Allocation-and-Growth-Replication-Kit/Data"
 
 use "patent.dta", clear
 
@@ -48,7 +48,7 @@ gen ge=v
 gen R=exp(log(1+gret)+log(1+gretp1)+log(1+gretp2))-1
 gen Rn=(-R * gx + ge^2)/ge/gx
 gen yy=sqrt(0.2e1)*Rn/0.2e1
- gen erfcyy=2*normal(-yy*sqrt(2))
+gen erfcyy=2*normal(-yy*sqrt(2))
 gen ExR=-ge*exp(-Rn ^ 2 / 0.2e1) *  sqrt(0.2e1) * _pi ^ (-0.1e1 / 0.2e1) / (-erfcyy) -  ge*Rn
 gen mw_graw3m0F2=ExR*gmkcap/1000 
 drop  v yy delta gx R  ge erfcyy
